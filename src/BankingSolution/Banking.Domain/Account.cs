@@ -17,4 +17,13 @@ public class Account
     {
         return _balance;
     }
+
+    public void Withdraw(decimal amountToWithdraw)
+    {
+        if (amountToWithdraw > _balance)
+        {
+            throw new OverdraftException();
+        }
+        _balance -= amountToWithdraw;
+    }
 }
