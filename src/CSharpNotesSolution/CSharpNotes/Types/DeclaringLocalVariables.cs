@@ -1,7 +1,6 @@
 ﻿namespace CSharpNotes.Types;
 public class DeclaringLocalVariables
 {
-
     [Fact]
     public void ExplicitlyTypedLocalVariable()
     {
@@ -18,7 +17,7 @@ public class DeclaringLocalVariables
     }
 
     [Fact]
-    public void ImplicityTypedLocalVariablesWithVar()
+    public void ImplicitlyTypedLocalVariablesWithVar()
     {
         // If you are going to initialize the variable, C# already knows the type. You can have it infer the type.
         var a = 0; // if there is a literal number with no decimal point, it is an int.
@@ -27,8 +26,6 @@ public class DeclaringLocalVariables
         var d = 'A'; // this is a char
         var e = true;
         decimal salary = 80123.23M;
-
-
 
         var rover = new Dog();
     }
@@ -42,7 +39,4 @@ public class DeclaringLocalVariables
 }
 
 
-
 public class Dog { }
-
-

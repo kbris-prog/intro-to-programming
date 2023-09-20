@@ -31,15 +31,16 @@ public class OverdraftNotAllowed
             Assert.Equal(openingBalance, account.GetBalance());
         }
     }
-
     [Fact]
     public void OverdraftThrowsAnException()
     {
+        // Given
         var account = new Account();
         var openingBalance = account.GetBalance();
 
         var amountToWithdraw = openingBalance + .01M;
 
+        // When & then
         Assert.Throws<OverdraftException>(() =>
         {
             account.Withdraw(amountToWithdraw);

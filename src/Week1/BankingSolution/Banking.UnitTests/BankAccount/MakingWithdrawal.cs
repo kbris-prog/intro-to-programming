@@ -3,6 +3,7 @@
 namespace Banking.UnitTests.BankAccount;
 public class MakingWithdrawal
 {
+
     [Theory]
     [InlineData(82.23)]
     [InlineData(200)]
@@ -23,7 +24,9 @@ public class MakingWithdrawal
     public void CanTakeEntireBalance()
     {
         var account = new Account();
+
         account.Withdraw(account.GetBalance());
+
         Assert.Equal(0, account.GetBalance());
     }
 }
